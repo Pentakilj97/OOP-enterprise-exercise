@@ -1,12 +1,12 @@
-class Manager extends Person{
+class Manager extends Person {
     constructor(name, surname, employees = []) {
         super(name, surname);
         this.employees = employees;
     }
     toString() {
-        return super.toString()+`Employees: ${(this.employees).length}\nClients: ${this.totalClients()}\nTotal Earnings: ${this.totalEarnings()}€`;
+        return super.toString() + `Employees: ${(this.employees).length}\nClients: ${this.totalClients()}\nTotal Earnings: ${this.totalEarnings()}€`;
     }
-    totalClients(){
+    totalClients() {
         let employeeList = this.employees;
         let totClients = 0;
         for (let i = 0; i < employeeList.length; i++) {
@@ -16,7 +16,7 @@ class Manager extends Person{
         }
         return totClients;
     }
-    totalEarnings(){
+    totalEarnings() {
         let employeeList = this.employees;
         let totEarned = 0;
         for (let i = 0; i < employeeList.length; i++) {
@@ -26,10 +26,10 @@ class Manager extends Person{
         }
         return totEarned;
     }
-    hire(newEmployee){
+    hire(newEmployee) {
         this.employees.push(newEmployee);
     }
-    emploYEET(Employee){
+    emploYEET(Employee) {
         this.employees.pop(Employee);
     }
 }

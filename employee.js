@@ -19,7 +19,7 @@ class Employee extends Person{
     toString(){
         return super.toString()+`Client(s): ${(this.clients).length}\nTotal Earned: ${this.totalEarnings()}€\nBest Client: ${this.bestClient()}`;
     }
-    totalEarnings(orders){
+    totalEarnings(){
         let totalEarn = 0;
         for (let i = 0; i < (this.clients).length; i++) {
             const element = (this.clients)[i];

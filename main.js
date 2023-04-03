@@ -9,25 +9,58 @@ order06 = new Order("Siciliana", 8, 6.00);
 order07 = new Order("Romana", 5, 6.50);
 order08 = new Order("Napoletana", 8, 6.00);
 order09 = new Order("Bufala", 9, 7.00);
+
+
 // CLIENTI
 client00 = new Client("Jing","Wang", "via XX Settembre, 20", [order00, order03]);
 client01 = new Client("Davide","Consigliere", "via XXV Aprile, 25", [order01, order04, order08]);
 client02 = new Client("Simone","Maccarone", "via XII Ottobre, 12", [order07]);
 client03 = new Client("Daniele","Puggioni", "via Cesarea, 5", [order09, order06, order02]);
 client04 = new Client("Pietro","Viglino", "via Roma, 9", [order05]);
+
+
+console.log()
 // RESPONSABILI NEGOZI
 employee00 = new Employee("Davide","Cresta",[client01]);
 employee01 = new Employee("Luis","Castro",[client03, client04]);
 employee02 = new Employee("Valentina","Cherubini",[client02]);
 employee03 = new Employee("Vlad","Vladi",[client00]);
+
 // MANAGER
 manager00 = new Manager("Chiara", "Badile", [employee02, employee00]);
 manager01 = new Manager("Andrea", "Asioli", [employee01, employee03]);
+
+
+// console.log(employee00.toString())
+
+
+
+const numbers=[3,4,5,9];
+
+function isEven(element){
+    return element %2===0
+}
+
+function multiplyBy3(element){
+    return element * 9
+}
+
+console.log(Utility.filtler(numbers, isEven))
+
+console.log(Utility.map(numbers, multiplyBy3))
+
+
+
+function sum(number1,number2){
+    return number1+number2;
+}
+
+console.log(Utility.reduce(numbers,sum,0))
 // Stampe test
 // Da finire: Classe Person, funzioni getAge, isBirthday
 //let doT = new Date(2022, 11, 31).getFullYear();
 
-let age;
-let testdoB = new Date(1993, 08, 05).toString(); console.log(testdoB);
-let today = new Date(2013,08,05).toString(); console.log(today);
-age = today - testdoB; console.log(age);
+// let age;
+// let testdoB = new Date(1993, 08, 05).toString(); console.log(testdoB);
+// let today = new Date(2013,08,05).toString(); console.log(today);
+// age = today - testdoB; console.log(age);
